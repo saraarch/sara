@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my file</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        //this is single script
+        var hello = "my first file!";
+        console.log(hello);
+        const data = {
+    "name": "Saranya",
+    "age": "29",
+    "skills": ["Html", "css","javascript"],
+
+  };
+  
+  
+  // For, For in, For of, ForEach
+
+  
+  
+  // Keys, Values
+  
+  console.log("### For Loop ###");
+  const keys = Object.keys(data);
+  for(var i=0;i<keys.length;i++) {
+      console.log(`${keys[i]} : ${data[keys[i]]}`);
+  }
+  
+  console.log("### For Each ###")
+  
+  keys.forEach((key) => {
+      console.log(`${key} : ${data[key]}`);
+  })
+  
+  console.log("### For Of ###");
+  for ( const key of keys ) {
+      console.log(`${key} : ${data[key]}`);
+  }
+  
+  console.log("### For in ###")
+  for (const key in data) {
+      console.log(`${key} : ${data[key]}`);
+  }
+    /* JSON resume format
+    {
+“Basics":SARANYA DEVI P S”,
+
+“Mob No":"+919113235837”,	
+“E-mail Id":saranarchi.1@gmail.com”,
+“EXECUTIVE SUMMARY":"An expert Designer",
+"Painter",
+"Architect with proven expertise in crafting various structures by considering the natural ventilation and Green Space and having extensive internship experience in designing residential and commercial buildings”,
+}
+},
+SOFTWARES WELL VERSED":[{“Lumion”,”Revit Architecture”,“Adobe Photoshop”,“AutoCad”,“Google Sketchup”,“Microsoft Office”,
+“Basics of C","C++","HTML"," CSS”,}]
+
+“INTERN EXPERIENCE SUMMARY":[{"Company Name1":"P&B Architects",
+"Chennai”,
+
+“Company Name2":"Ravi Architects",
+"Chennai”,}]
+“ACADEMIC QUALIFICATIONS":[{"B.Arch from School of Architecture",
+"Hindustan University",
+"Chennai with First Class”,
+“Active Member of Council of Architecture”,}]
+“Key responsibilities handled”,[{ 
+	“Sketched  the Hotel Design through an entirely new concept called Kinetic Architecture”,
+	“Planned an urban design for Thiruvanmiyur Municipality",
+“Chennai by following a Heritage model”,
+“Designed a exotic resort through my own conceptual ideas”,
+“A new School of Architecture structure has been done and participated in Transparence Symposium 2013”,
+“An Architectural  visit to identify and realize the exclusive universal design of Tiruvannamalai”,
+"A Spiritual Centre of Tamil Nadu”,
+“Other residential Buildings and Commercial centres were designed according to the location",
+"space constraint",
+"client requirement",
+"climate",
+"etc while doing internship”,
+“Using Advanced Architectural concepts",
+"designed Public Library by studying the key features of one of the oldest Public Library located in Egmore Chennai and the new library located in GuindyChennai”,
+“Thesis made for constructing a resort by physical study to Tamil Nadu Tourism & Development Corporation",
+"Kanyakumari”
+“PERSONALITY TRAITS": [{“Good negotiator”,
+	“Quick Learner”,
+	“Target oriented”,
+	“Excellent Leadership qualities and Innovative Thinker”,
+	“Proficiency in Written & Verbal Communication”,}]
+“CAREER OBJECTIVE":"Seeking a challenging career in Architecture Field with a progressive organization which will utilize my skills",
+"abilities",
+"experience and education whilst contributing to the development of the organization”,
+PERSONAL DETAILS":"Date of Birth":"01.05.1992”,
+Sex":"Female”,
+Nationality":"Indian”,
+“Languages Known":"Tamil & English”,
+“Hobbies":[{"Sketching",
+"Painting",
+"Nodel Making",
+"Photography",
+"Short Film Making",
+"Traveling",
+"Documentation",
+"Music",
+"Jewellery Making”,}]
+Permanent Address":C-101”,
+"Power Grid Corporation of India Ltd.",
+"Singanayakanahalli",
+"Yelahanka Hubli",
+"Bangalore",
+}
+};
+*/
+    
+    </script>
+    
+</body>
+</html>
