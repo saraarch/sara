@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my file</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        //this is single script
+        var hello = "my first file!";
+        console.log(hello);
+        //Print odd numbers in an array
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const odds = arr.filter(number => {
+  return number % 2 !== 0;
+});
+
+console.log(odds);
+//######
+//title case
+function titleCase(str) {
+  return str.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase());
+}
+console.log(titleCase('saranya devi'));
+//######
+//sum function
+var arrayy = [1, 2, 3, 4];
+console.log(function(array)
+{
+var sum = 0;
+
+for (let i = 0; i < arrayy.length; i++) {
+    sum += arrayy[i];
+}
+return(sum);
+}(arrayy));
+
+//########
+//sum arrow
+const sum = [1, 2, 3].reduce((b, a) => b + a, 0);
+console.log(sum);
+//########
+
+//palindrome
+const array = ['carecar', 1344, 12321, 'did', 'cannot','pop'];
+const isPalindrome = el => {
+   const str = String(el);
+   let i = 0;
+   let j = str.length - 1;
+   while(i < j) {
+      if(str[i] === str[j]) {
+         i++;
+         j--;
+      }
+      else {
+         return false;
+      }
+   }
+   return true;
+};
+const findPalindrome = arr => {
+   return array.filter(el => isPalindrome(el));
+};
+console.log(findPalindrome(array));
+//########
+//palindrome function
+var x = ["carecar","12321","did"];
+
+console.log(function(x) {
+    
+    var result =[];
+    for (i=0;i<x.length;i++){
+        var s=x[i];
+        var temp = x[i].split("");
+        temp=temp.reverse();
+        temp=temp.join("");
+        if(s===temp){
+            result.push(x[i]);}
+        }
+    return result.join(" ")
+}(x));
+
+//arrow function
+//odd
+let nums = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+let oddnums = arr.filter(n => n%2)
+
+console.log(oddnums)
+//median
+var arr1=[1,2,3,4,5,16];
+var arr2=[7,8,9,10,11]
+
+console.log(function (arr1,arr2){
+    
+    var arr3=[...arr1,...arr2];
+    
+    arr3.sort(function(a, b){return a-b})
+    console.log(arr3);
+    if(arr3.length%2==0){
+        return arr3[arr3.length/2]+arr3[arr3.length/2-1];
+    }
+    else
+        return arr3[Math.floor(arr3.length/2)];
+    
+}(arr1,arr2));
+
+//Remove duplicates from an array
+
+var arr2=[1,3,3,6,5,6];  
+
+
+console.log(function (arr2){
+    
+    var temp=[];
+    
+    
+    for(i=0;i<arr2.length;i++){
+       
+        var flag=true;
+        for(j=i+1;j<arr2.length;j++){
+            if(arr2[i]==arr2[j]){
+                flag=false;
+                break;
+            }
+        }
+        
+        if(flag==true){
+            temp.push(arr2[i])
+        }
+        
+        
+    }
+    
+    return temp.join(" ")
+    
+}(arr2));
+//rotate k
+var arrr=[1,2,3,4,5,6];   
+var k=2;
+
+
+console.log(function (arrr,k){
+    
+    var temp=[];
+    
+    for(i=arrr.length-k;i<arrr.length;i++)
+        temp.push(arrr[i])
+        
+    for (i=0;i<arrr.length-k;i++)
+        temp.push(arrr[i])
+        
+    return temp.join(" ")
+    
+}(arrr,k));
+//arrow function prime num
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+//prime function
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function isPrime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log( numArray.filter(isPrime))
+
+
+    
+    
+    </script>
+    
+</body>
+</html>
