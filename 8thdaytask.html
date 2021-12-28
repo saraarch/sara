@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my file</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        //this is single script
+        var hello = "my first file!";
+        console.log(hello);
+      
+var printFullName = function(){
+  return this.lastName + ","
++this.firstName;
+};
+
+var student3 = {
+  firstName: "Mohamed",
+  lastName:"Mustafa",
+  FullName: printFullName,
+}
+  console.log(student3.FullName());
+
+//Call invokes the function and allows to pass in arguments one by one.
+console.log(printFullName.call(student3));
+//Apply invokes the function and allows to pass in arguments as an array.
+console.log(printFullName.apply(student3));
+//Bind returns a new function, allows to pass in a this array and any number of arguments.
+console.log(printFullName.bind(student3));
+/* we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We’d like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it.
+
+Prototypal inheritance is a language feature that helps in that.
+
+[[Prototype]]
+In JavaScript, objects have a special hidden property [[Prototype]] (as named in the specification), that is either null or references another object. That object is called “a prototype”:
+
+
+When we read a property from object, and it’s missing, JavaScript automatically takes it from the prototype. In programming, this is called “prototypal inheritance”. And soon we’ll study many examples of such inheritance, as well as cooler language features built upon it.
+
+The property [[Prototype]] is internal and hidden, but there are many ways to set it.
+
+One of them is to use the special name __proto__, like this:
+
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // sets rabbit.[[Prototype]] = animal
+Now if we read a property from rabbit, and it’s missing, JavaScript will automatically take it from animal.
+
+For instance:
+
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // (*)
+
+// we can find both properties in rabbit now:
+alert( rabbit.eats ); // true (**)
+alert( rabbit.jumps ); // true
+Here the line (*) sets animal to be the prototype of rabbit.
+
+Then, when alert tries to read property rabbit.eats (**), it’s not in rabbit, so JavaScript follows the [[Prototype]] reference and finds it in animal (look from the bottom up):
+
+
+Here we can say that "animal is the prototype of rabbit" or "rabbit prototypically inherits from animal".
+
+So if animal has a lot of useful properties and methods, then they become automatically available in rabbit. Such properties are called “inherited”.*/
+    </script>
+</body>
+</html>
